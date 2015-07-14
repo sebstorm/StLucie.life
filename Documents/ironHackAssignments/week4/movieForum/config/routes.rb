@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   get '/' => "movies#home"
 
+  get '/new' => "movies#new"
+
+  resources(:movies)
 
 
 
