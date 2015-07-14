@@ -1,0 +1,17 @@
+<h1>Don't drink my water</h1>
+
+<%= flash_message %>
+
+
+<ul>
+		<% @con.each do |con| %>
+			
+			<li>
+			<%= con.artist %>
+		 	<%= con.date %>
+		 	<%= con.venue %>
+		 	<%= con.city %>
+		 	<%= con.ticket_price %>
+		 	<%= con.description %>
+		 	</li>
+		<% end %>

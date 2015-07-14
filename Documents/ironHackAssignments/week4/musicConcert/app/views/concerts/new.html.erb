@@ -1,0 +1,44 @@
+<h1>You bitches drank my water</h1>
+
+
+	<%= flash_message %>
+			
+		<% if @con.errors.any? %>
+			<ul>
+				<% @con.errors.full_messages.each do |err| %>
+				<li><%= err %></li>
+				<% end %>
+			</ul>
+		<% end %>
+
+
+		<%= form_for([@con]) do |frm| %>
+			<div class="form-group">
+				<%= frm.label(:artist) %>
+				<%= frm.text_field(:artist, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:date) %>
+				<%= frm.date_field(:date, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:venue) %>
+				<%= frm.text_field(:venue, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:city) %>
+				<%= frm.text_field(:city, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:ticket_price) %>
+				<%= frm.text_field(:ticket_price, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:decription) %>
+				<%= frm.text_field(:description, :class => "form-control") %>
+			</div>
+			<br>
+
+			<button type="submit">Save Entry</button>
+		<% end %>
+		
