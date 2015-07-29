@@ -1,0 +1,32 @@
+
+
+	<div class="container">
+		<div class="panel panel-default pan">
+			<h2 class="title text-center">Find some awesome food!</h2><br>
+			<ul class="list-inline pad">
+			 
+			 <div class="form-group res">
+				 <%= form_tag("/restaurants/show", method: "get") do  %>
+				 <%= select_tag(:id, options_from_collection_for_select(Restaurant.all, :id, :name), class: "field-set") %>
+				 <%= submit_tag("Name") %>
+				<% end %>
+			 </div>
+			<div class="form-group">	
+				<li><%= form_tag("/search", method: "get") do  %>
+				  <%= select_tag(:category_id, options_from_collection_for_select(Category.all, :id, :name), :include_blank => "Any") %>
+				  <%= select_tag(:genre_id, options_from_collection_for_select(Genre.all, :id, :name), :include_blank => "Any") %>
+				  <%= select_tag(:type_id, options_from_collection_for_select(Type.all, :id, :name), :include_blank => "Any") %>
+				  <%= submit_tag("Category") %>
+				<% end %></li>
+				</div>
+			</ul>
+		</div>	
+	</div>	
+
+
+
+
+
+
+
+	

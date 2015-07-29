@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get '/' => "pages#pages"
+
+  get '/home' => "restaurants#home"
+
+  get '/index' => "restaurants#index"
+
+  get '/search' => "restaurants#search"
+  get '/restaurants/show' => "restaurants#show"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
